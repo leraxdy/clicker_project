@@ -1,0 +1,14 @@
+.box {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  text-align: center;
+  line-height: 200px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
