@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const boxes = document.querySelectorAll(".box");
   let clickCount = 0;
   let currentIndex = 0;
+  let clicks = 0;
 
   boxes.forEach((box) => {
     box.addEventListener("click", function () {
       clickCount++;
+      clicks++;
       console.log("Кликов:", clickCount);
       active();
       
@@ -16,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   ;
   document.addEventListener("keydown", (e) => {
-    if(e.key === "q"){
+    if(e.key === "q" && clicks >= 4){
       clickCount = clickCount + 2;
+      clicks = 0;
     }
-    if(e.key === "e"){
+    if(e.key === "e" && clicks >= 6){
       clickCount += 5;
+      clicks = 0;
     }
     console.log("Кликов:", clickCount);
     active();
