@@ -1,16 +1,20 @@
 "use strict";
 
+window.game = {
+    currentIndex: 0,
+    clicks: 0,
+    hpValue: 150
+};
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const boxes = document.querySelectorAll(".box");
   let clickCount = 0;
-  let currentIndex = 0;
-  let clicks = 0;
 
   boxes.forEach((box) => {
     box.addEventListener("click", function () {
       clickCount++;
-      clicks++;
+      game.clicks++;
       console.log("Кликов:", clickCount);
       active();
       
@@ -18,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   ;
   document.addEventListener("keydown", (e) => {
-    if(e.key === "q" && clicks >= 4){
+    if(e.key === "q" && game.clicks >= 4){
       clickCount = clickCount + 2;
-      clicks = 0;
+      game.clicks = 0;
     }
-    if(e.key === "e" && clicks >= 6){
+    if(e.key === "e" && game.clicks >= 6){
       clickCount += 5;
-      clicks = 0;
+      game.clicks = 0;
     }
     console.log("Кликов:", clickCount);
     active();
@@ -32,14 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function active(){ 
     if (clickCount % 10 === 0) {
-      boxes[currentIndex].classList.remove("active");
+      boxes[game.currentIndex].classList.remove("active");
 
-      currentIndex++;
-      if (currentIndex >= boxes.length) {
-        currentIndex = 0;
+      game.currentIndex++;
+      if (game.currentIndex >= boxes.length) {
+        game.currentIndex = 0;
+        game.hpValue = 150;
       }
 
-      boxes[currentIndex].classList.add("active");
+      boxes[game.currentIndex].classList.add("active");
     }
   }
 

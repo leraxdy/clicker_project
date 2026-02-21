@@ -1,4 +1,4 @@
-div{
+.box{
     height: 100px;
     width: 100px;
     background-color: pink;
@@ -7,4 +7,19 @@ div{
 
 .active {
   display: block;
+}
+
+
+.hp{
+  height: 20px;
+  width: 150px;
+  display: block;
+  margin: 50px;
+  background-color: lightcoral;
+}
+
+#heal{
+  height: 100px;
+  width: 100px;
+  background-color: darkseagreen;
 }
