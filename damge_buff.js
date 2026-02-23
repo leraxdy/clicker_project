@@ -3,7 +3,8 @@
 window.game = {
     currentIndex: 0,
     clicks: 0,
-    hpValue: 150
+    hpValue: 150,
+    enemyHp: 100
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
   })
   ;
   document.addEventListener("keydown", (e) => {
-    if(e.key === "q" && game.clicks >= 4){
+    if(e.code === "KeyQ" && game.clicks >= 4){
       clickCount = clickCount + 2;
       game.clicks = 0;
     }
-    if(e.key === "e" && game.clicks >= 6){
+    if(e.code === "KeyE" && game.clicks >= 6){
       clickCount += 5;
       game.clicks = 0;
     }
