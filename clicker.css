@@ -13,13 +13,19 @@
 .hp{
   height: 20px;
   width: 150px;
-  display: block;
   margin: 50px;
-  background-color: lightcoral;
+  background-color: rgb(154, 240, 128);
 }
 
 #heal{
   height: 100px;
   width: 100px;
   background-color: darkseagreen;
+}
+
+#enemy_hp{
+  height: 20px;
+  width: 150px;
+  margin: 50px;
+  background-color: lightcoral;
 }

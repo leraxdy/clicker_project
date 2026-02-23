@@ -7,13 +7,17 @@ window.game = {
     enemyHp: 100
 };
 
-document.addEventListener("DOMContentLoaded", function () {
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  let enHp = document.getElementById("enemy_hp");
   const boxes = document.querySelectorAll(".box");
   let clickCount = 0;
 
   boxes.forEach((box) => {
     box.addEventListener("click", function () {
+      game.enemyHp = game.enemyHp - 10;
+      enHp.style.width = game.enemyHp + "px";
       clickCount++;
       game.clicks++;
       console.log("Кликов:", clickCount);
@@ -44,8 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
         game.currentIndex = 0;
         game.hpValue = 150;
       }
-
+      
       boxes[game.currentIndex].classList.add("active");
+      game.enemyHp = 100;
     }
   }
 
