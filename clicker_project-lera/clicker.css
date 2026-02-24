@@ -1,0 +1,76 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/img/city.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.box {
+  height: 400px;
+  width: 400px;
+  background-image: url(/img/zombie.png);
+  background-size: cover;
+  display: none;
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  color: khaki;
+}
+
+.active {
+  display: block;
+}
+
+.box1 {
+  background-image: url(/img/standing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box2 {
+  background-image: url(/img/pngimg.com\ -\ zombie_PNG23.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hp {
+  height: 20px;
+  width: 150px;
+  background-color: rgb(154, 240, 128);
+  position: absolute;
+  bottom: 50px;
+  right: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+#heal {
+  height: 300px;
+  width: 300px;
+  background-image: url(/img/hand-holding-pistol-whf0ocma3tagww3f.png);
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#enemy_hp {
+  height: 20px;
+  width: 150px;
+  margin: 50px;
+  background-color: lightcoral;
+  position: absolute;
+  top: 400px;
+  left: 40px;
+  display: flex;
+  justify-content: center;
+}
